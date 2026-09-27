@@ -1,0 +1,22 @@
+name: Python syntax check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile plugin Python files
+        run: |
+          python -m py_compile \
+            MultiSource_DEM_Downloader/__init__.py \
+            MultiSource_DEM_Downloader/common.py \
+            MultiSource_DEM_Downloader/worker.py \
+            MultiSource_DEM_Downloader/dock.py \
+            MultiSource_DEM_Downloader/plugin.py
