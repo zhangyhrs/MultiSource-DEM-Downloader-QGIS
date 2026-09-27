@@ -28,7 +28,8 @@ from .dock import DEMDock
 class DEMDownloaderPlugin:
     def __init__(self,iface):self.iface=iface;self.action=None;self.dock=None;self.maptool=None;self.permanent_rubber=None
     def initGui(self):
-        self.action=QAction(QIcon(ICON_PATH),'Multi-Source DEM Downloader v1.0.0',self.iface.mainWindow());self.action.triggered.connect(self.show);self.iface.addPluginToRasterMenu('&Multi-Source DEM Downloader',self.action);self.iface.addToolBarIcon(self.action)
+        icon_path=os.path.join(PLUGIN_DIR,'icon.svg')
+        self.action=QAction(QIcon(icon_path),'Multi-Source DEM Downloader v1.0.0',self.iface.mainWindow());self.action.triggered.connect(self.show);self.iface.addPluginToRasterMenu('&Multi-Source DEM Downloader',self.action);self.iface.addToolBarIcon(self.action)
     def unload(self):
         if self.action:self.iface.removePluginRasterMenu('&Multi-Source DEM Downloader',self.action);self.iface.removeToolBarIcon(self.action)
         if self.dock:self.iface.removeDockWidget(self.dock)
