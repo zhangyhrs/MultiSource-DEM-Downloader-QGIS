@@ -1,0 +1,19 @@
+[general]
+name=Multi-Source DEM Downloader
+qgisMinimumVersion=3.28
+qgisMaximumVersion=3.99
+version=1.0.0
+author=zhangyhrs
+email=zhangyhcumt@163.com
+description=Download, mosaic and clip multiple global DEM/DSM datasets by study area in QGIS.
+about=Multi-Source DEM Downloader is a QGIS plugin for downloading and processing multiple global elevation datasets. It supports public Copernicus DEM GLO-30/GLO-90 tiles, NASA Earthdata products such as SRTM and NASADEM, and JAXA AW3D30 with registered-user authentication. Study areas can be defined from the current map extent, an interactively drawn rectangle, polygon layers, or external SHP/GPKG/GeoJSON files. The plugin can mosaic, clip, load results into QGIS and optionally generate hillshade.
+category=Raster
+tags=DEM,DSM,elevation,terrain,Copernicus,SRTM,NASADEM,ALOS,AW3D30,NASA,Earthdata,JAXA,raster
+icon=icon.png
+homepage=https://github.com/zhangyhrs/MultiSource-DEM-Downloader-QGIS
+repository=https://github.com/zhangyhrs/MultiSource-DEM-Downloader-QGIS
+tracker=https://github.com/zhangyhrs/MultiSource-DEM-Downloader-QGIS/issues
+experimental=False
+deprecated=False
+server=False
+changelog=Initial public release. Multi-source DEM/DSM download with Copernicus public cloud tiles, NASA CMR/Earthdata authentication, JAXA AW3D30 account access, network retry/proxy support, mosaicking, clipping and optional hillshade generation.
